@@ -19,6 +19,11 @@ public class Load extends Statement {
         return count + 1;
     }
 
+    @Override
+    public double executeDouble(double count, Map<String, Value> memory) {
+        return 0;
+    }
+
     public String getVariable() {
         return variable;
     }

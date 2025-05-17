@@ -12,7 +12,9 @@ public abstract class Instruction {
             binaryOperation.execute(stackMachine.pop(), stackMachine.pop());
         } else if (this instanceof UnaryOperation uniUnaryOperation){
             uniUnaryOperation.execute(stackMachine.pop());
-        } else if( this instanceof Statement statement) {
+        } else if (this instanceof ZeroOperand zeroOperand) {
+            zeroOperand.execute();
+        } else if(this instanceof Statement statement) {
             return statement.execute(stackMachine.getCounter(), stackMachine.getMemory());
         }
         return stackMachine.getCounter() + 1;

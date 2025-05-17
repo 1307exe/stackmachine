@@ -17,6 +17,12 @@ public class primeNumber extends Statement {
         push(new Value<>(isprimeNumber(this.parameter)));
         return count +1;
     }
+
+    @Override
+    public double executeDouble(double count, Map<String, Value> memory) {
+        return 0;
+    }
+
     private boolean isprimeNumber(int value) {
         if (value < 2) {
             return false;

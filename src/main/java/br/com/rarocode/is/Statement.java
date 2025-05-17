@@ -7,4 +7,5 @@ import java.util.Map;
 public abstract class Statement extends Instruction{
 
     public abstract int execute(int count, Map<String, Value> memory);
+    public abstract double executeDouble(double count, Map<String, Value> memory);
 }

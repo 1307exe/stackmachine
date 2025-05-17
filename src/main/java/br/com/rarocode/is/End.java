@@ -9,4 +9,9 @@ public class End extends Statement{
     public int execute(int count, Map<String, Value> memory) {
         return -1;
     }
+
+    @Override
+    public double executeDouble(double count, Map<String, Value> memory) {
+        return 0;
+    }
 }
